@@ -1,7 +1,7 @@
 # Docker image for a Drone notification plugin for Cisco Spark
 
 FROM python:alpine
-MAINTAINER Hank Preston <hank.preston@gmail.com>
+MAINTAINER Justin Barksdale (jbarksdale@threepings.com)
 
 RUN mkdir -p /usr/src/drone-spark
 WORKDIR /usr/src/drone-spark
