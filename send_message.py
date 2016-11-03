@@ -60,9 +60,9 @@ def verify_roomId(roomId):
 
 '''
 def get_avatar(avatar):
-    '''
+
     Grab avatar information from Spark API
-    '''
+
     url = "%s/%s" % (spark_urls["people"], avatar)
 
     response = requests.get(
