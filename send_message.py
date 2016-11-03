@@ -58,6 +58,22 @@ def verify_roomId(roomId):
     else:
         return False
 
+def get_avatar(avatar):
+    '''
+    Grab avatar information from Spark API
+    '''
+    url = "%s/%s" % (spark_urls["people"], avatar)
+
+    response = requests.get(
+        url,
+        headers = spark_headers
+    )
+
+    if response.status_code == 200:
+        return True
+    else:
+        return False
+
 def standard_message(payload):
     '''
     This will create a standard notification message.
@@ -66,7 +82,7 @@ def standard_message(payload):
     if status == "success":
         message = "##Build for %s is Successful \n" % (payload["repo"]["full_name"])
         message = message + "**Build author:** [%s](%s) \n" % (payload["build"]["author"], payload["build"]["author_email"])
-        message = ![Logo](https://1efa7a94ed216783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~912aecc551925129248b4a4a8be4f4c6~SWUSmkWORbeicuKhuSPxlQ==~1600)
+        message = message + avatar
     else:
         message = "#Build for %s FAILED!!! \n" % (payload["repo"]["full_name"])
         message = message + "**Drone blames build author:** [%s](%s) \n" % (payload["build"]["author"], payload["build"]["author_email"])
