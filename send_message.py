@@ -83,7 +83,6 @@ def standard_message(payload):
     if status == "success":
         message = "##Build for %s is Successful \n" % (payload["repo"]["full_name"])
         message = message + "**Build author:** [%s](%s) \n" % (payload["build"]["author"], payload["build"]["author_email"])
-        message = message + "![Avatar](https://1efa7a94ed216783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~912aecc551925129248b4a4a8be4f4c6~SWUSmkWORbeicuKhuSPxlQ==~1600)"
     else:
         message = "#Build for %s FAILED!!! \n" % (payload["repo"]["full_name"])
         message = message + "**Drone blames build author:** [%s](%s) \n" % (payload["build"]["author"], payload["build"]["author_email"])
@@ -94,6 +93,7 @@ def standard_message(payload):
     message = message + "* **Branch:** %s\n" % (payload["build"]["branch"])
     message = message + "* **Event:** %s\n" % (payload["build"]["event"])
     message = message + "* **Commit Message:** %s\n" % (payload["build"]["message"])
+    message = message + https://1efa7a94ed216783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~912aecc551925129248b4a4a8be4f4c6~SWUSmkWORbeicuKhuSPxlQ==~1600
 
     return message
 
