@@ -99,7 +99,7 @@ def standard_message(payload):
 def send_message(message_data, message_text):
 
     message_data["markdown"] = message_text
-    message_data["files"] = https://1efa7a94ed216783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~912aecc551925129248b4a4a8be4f4c6~SWUSmkWORbeicuKhuSPxlQ==~1600
+    message_data["files"] = "https://1efa7a94ed216783e352-c62266528714497a17239ececf39e9e2.ssl.cf1.rackcdn.com/V1~912aecc551925129248b4a4a8be4f4c6~SWUSmkWORbeicuKhuSPxlQ==~1600"
 
     response = requests.post(
         spark_urls["messages"],
